@@ -973,7 +973,7 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
 
 				// Loop through cells
 				$cellsByRow = array();
-				foreach ($pSheet->getCellCollection() as $cellID) {
+				foreach ($pSheet->getCellCollection(false) as $cellID) {
 					$cellAddress = PHPExcel_Cell::coordinateFromString($cellID);
 					$cellsByRow[$cellAddress[1]][] = $cellID;
 				}
